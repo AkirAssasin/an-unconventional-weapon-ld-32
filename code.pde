@@ -254,19 +254,19 @@ void draw() {
 
 void lightBeam(x,y) {
     fill(0);
-    strokeWeight(10);
+    strokeWeight(1);
     stroke(0);
     mouseRot = atan2(mouseY - y, mouseX - x) / PI * 180;
     translate(x,y);
     rotate(mouseRot/180*PI);  
     beginShape();
         vertex(0,0);
-        vertex(width,-150);
-        vertex(width,-height);
-        vertex(-width,-height);
-        vertex(-width,height);
-        vertex(width,height);
-        vertex(width,150);
+        vertex(width*2,-150);
+        vertex(width*2,-height*2);
+        vertex(-width*2,-height*2);
+        vertex(-width*2,height*2);
+        vertex(width*2,height*2);
+        vertex(width*2,150);
         vertex(0,0);
     endShape();
     rotate(0-mouseRot/180*PI);
